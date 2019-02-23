@@ -1,0 +1,81 @@
+ENTIDADES:
+
+1 - Cliente
+		- id (chave primária) NIF (NOT NULL)
+		- nome (NOT NULL) VARCHAR(75)
+		- Contacto (vai ser uma entidade) 
+			- email(multi-valor)
+			- nº telemóvel(multi-valor)
+		- data de registo do perfil
+		- sexo (F,M,outros)
+		- estado civil
+		- data de nascimento (possível para premiar cliente no dia de aniversário, por questões estatiticas, etc)
+		- pontos acumulados (não esquecer do trigger)	(PENDENTE)
+		- valor total ganho em descontos (não esquecer do trigger)
+		- valor total gasto (não esquecer do trigger)
+		- morada - rua
+				 - Nacionalidade
+				 - Código postal
+				 - Distrito
+				 - ... 
+
+2 - Funcionário (vários tipos de Funcionários: Admin, normal, etc)
+		- id (chave primária) (NOT NULL)
+		- tipo (admin, normal, anormal, burro)
+		- sexo (F,M,outros)
+		- nome (NOT NULL)
+		- Contacto (vai ser uma entidade) (NOT NULL)
+			- email(multi-valor)	
+			- nº telemóvel(multi-valor) 
+		- data de registo do perfil 
+		- data de nascimento
+		- valor das vendas (NÃO ESQUECER TRIGGER)
+		- morada - rua
+				 - Nacionalidade
+				 - Código postal
+				 - Distrito
+				 - ... 
+
+3 - Serviço
+		- id (chave primária) (NOT NULL)
+		- preço (NOT NULL)
+		- descrição (NOT NULL)
+		- descrição do estado do produto no momento que é entregue (NOT NULL) - ex: caso o cliente queria reclamar um possíel risco no ecrã que no momento de entrega não existia
+		- data de inicio (NOT NULL)
+		- data fim
+
+4 - Produto
+		- id (chave primária) (NOT NULL)
+		- designação (NOT NULL)
+		- categoria	(VARCHAR(50))
+		- stock (NOT NULL)
+		- preço (NOT NULL)
+		- descrição (VARCHAR(1000))
+		- tem percetagem de desconto (0 - não tem, 0 < d < 1 tem) (dizer que está entre 0 e 1)
+
+5 - Venda
+		- id (chave primária) (NOT NULL)
+		- NIF/ id do Cliente (chave estrangeira) (NOT NULL)
+		- id funcionário que vendeu o produto (NOT NULL)
+		- data de venda (NOT NULL)
+		- preço total (NOT NULL)
+
+RELAÇÕES:
+
+1 - VendaProduto
+		- preço final(pode ser igual ou não ao preço inicial do produto) (NOT NULL)
+		- quantidade (NOT NULL)
+		- preço total (NOT NULL)
+		- tenho de deixar de ser gay by RIcardo PEtronilho
+
+		
+
+
+
+
+
+
+
+
+
+

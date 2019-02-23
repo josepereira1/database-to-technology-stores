@@ -1,0 +1,34 @@
+1 - Qualquer Funcionário pode criar perfil do Cliente
+2 - Apenas o Funcionário (tipo: Admin) pode remover perfil do Cliente
+
+3 - Apenas o Funcionário (tipo: Admin) pode criar outro funcionário
+4 - Apenas o Funcionário (tipo: Admin) pode remover outro funcionário
+
+5 - os Funcionários (tipo: normal) podem alterar o seu próprio perfil ou o de um Cliente, mas apenas em alguns campos
+(por exemplo não podem alterar o seu tipo, id, etc.)
+
+6 - Apenas o Funcionário (tipo: Admin) pode alterar todo o perfil do cliente ou funcionário
+7 - Apenas o Funcionário (tipo: Admin) pode alterar a informação de produtos ou serviços
+8 - Apenas o Funcionário (tipo: Admin) pode alterar descontos em produtos ou serviços
+
+9 - O Cliente pode comprar um produto ou serviço
+
+10 - Quando o Cliente compra/ pede um serviço:
+	 Questiona-se se o cliente tem ficha/ perfil
+		10.1 -> caso tenha usa-se a informação da ficha
+		10.2 -> caso não tenha, pergunta-se se pretende criar agr
+		10.3 -> caso não queria criar agr pede-se a informação mínima:
+			- nome completo
+			- NIF
+			- nº de telmóvel ou/e email
+
+11 - Quando o Cliente compra um Produto:
+	11.1 -> caso tenha usa-se ficha de cliente e associa-se o (id) do produto comprado á ficha do Cliente
+	11.2 -> caso não tenha, pergunta-se se pretende criar agr
+	emite a fatura (SEMPRE, na fatura pode ter NIF ou não)
+
+12 - Qualquer Funcionário pode consultar faturas emitidas
+
+13 - Qualquer Funcionário tem acesso ao catálogo de Produtos na loja
+
+14 - O funcionário do tipo administrador pode consultar os produtos mais vendidos.
